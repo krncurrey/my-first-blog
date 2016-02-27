@@ -8,11 +8,15 @@
 			<h2>Living Life and Loving Cake!</h2>
 		</div>
 
-		<div>
-			<h2><a href= "">Welcome!!</a></h2>
-			<p>Hi there!</p>
-			<p>It works!</p>
-		</div>
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date}}</p>
+				<h1><a href="/">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaks }}</p>
+			</div>
+
+		{% endfor %}
+
 	</body>
 	
 <html>
